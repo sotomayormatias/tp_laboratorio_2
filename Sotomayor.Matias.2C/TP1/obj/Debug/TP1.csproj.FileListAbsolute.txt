@@ -1,0 +1,9 @@
+c:\users\alumno\Documents\Visual Studio 2012\Projects\Sotomayor.Matias.2C\TP1\bin\Debug\TP1.exe.config
+c:\users\alumno\Documents\Visual Studio 2012\Projects\Sotomayor.Matias.2C\TP1\bin\Debug\TP1.exe
+c:\users\alumno\Documents\Visual Studio 2012\Projects\Sotomayor.Matias.2C\TP1\bin\Debug\TP1.pdb
+c:\users\alumno\Documents\Visual Studio 2012\Projects\Sotomayor.Matias.2C\TP1\obj\Debug\TP1.csprojResolveAssemblyReference.cache
+c:\users\alumno\Documents\Visual Studio 2012\Projects\Sotomayor.Matias.2C\TP1\obj\Debug\TP1.frmCalculadora.resources
+c:\users\alumno\Documents\Visual Studio 2012\Projects\Sotomayor.Matias.2C\TP1\obj\Debug\TP1.Properties.Resources.resources
+c:\users\alumno\Documents\Visual Studio 2012\Projects\Sotomayor.Matias.2C\TP1\obj\Debug\TP1.csproj.GenerateResource.Cache
+c:\users\alumno\Documents\Visual Studio 2012\Projects\Sotomayor.Matias.2C\TP1\obj\Debug\TP1.exe
+c:\users\alumno\Documents\Visual Studio 2012\Projects\Sotomayor.Matias.2C\TP1\obj\Debug\TP1.pdb
