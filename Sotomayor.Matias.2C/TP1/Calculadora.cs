@@ -21,7 +21,7 @@ namespace TP1
             {
                 double resultado;
 
-                switch (Calculadora.validarOperador(operador))
+                switch (operador)
                 {
                     case "+":
                         resultado = numero1.getNumero() + numero2.getNumero();
@@ -39,7 +39,6 @@ namespace TP1
                             resultado = 0;
                         break;
                     default:
-
                         resultado = 0;
                         break;
                 }
@@ -54,7 +53,7 @@ namespace TP1
             /// <returns>Si no es un operador valido, retorna "+", sino retorna el mismo operador que ingresó</returns>
             public static string validarOperador(string operador)
             {
-                if (operador != "+" || operador != "-" || operador != "*" || operador != "/")
+                if (operador != "+" && operador != "-" && operador != "*" && operador != "/")
                     operador = "+";
 
                 return operador;

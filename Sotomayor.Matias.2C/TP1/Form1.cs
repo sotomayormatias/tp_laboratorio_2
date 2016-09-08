@@ -16,14 +16,20 @@ namespace TP1
         {
             InitializeComponent();
             this.cmbOperacion.Items.Add("+");
+            this.cmbOperacion.Items.Add("-");
+            this.cmbOperacion.Items.Add("*");
+            this.cmbOperacion.Items.Add("/");
         }
 
         private void btnOperar_Click(object sender, EventArgs e)
         {
             Numero numero1 = new Numero(this.txtNumero1.Text);
             Numero numero2 = new Numero(this.txtNumero2.Text);
+            this.cmbOperacion.Text = Calculadora.validarOperador(this.cmbOperacion.Text);
 
-            Calculadora.operar(numero1, numero2, this.cmbOperacion.Text);
+            Numero resultado = new Numero(Calculadora.operar(numero1, numero2, this.cmbOperacion.Text));
+
+            this.lblResultado.Text = resultado.getNumero().ToString();
         }
 
         private void bntLimpiar_Click(object sender, EventArgs e)
@@ -31,6 +37,7 @@ namespace TP1
             this.lblResultado.Text = "";
             this.txtNumero1.Text = "";
             this.txtNumero2.Text = "";
+            this.cmbOperacion.Text = "";
         }
     }
 }
