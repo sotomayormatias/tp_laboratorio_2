@@ -41,8 +41,35 @@ namespace EntidadesAbstractas
         {
             get { return _nombre; }
             set { _nombre = value; }
-        } 
+        }
+
+        public string StringToDNI
+        {
+            set
+            {
+                this._dni = int.Parse(value);
+            }
+        }
         #endregion
-        
+
+
+        public Persona(string nombre, string apellido, ENacionalidad nacionalidad)
+        {
+            this._nombre = nombre;
+            this._apellido = apellido;
+            this._nacionalidad = nacionalidad;
+        }
+
+        public Persona(string nombre, string apellido, int dni, ENacionalidad nacionalidad)
+            : this(nombre, apellido, nacionalidad)
+        {
+            this._dni = dni;
+        }
+
+        public Persona(string nombre, string apellido, string dni, ENacionalidad nacionalidad)
+            : this(nombre, apellido, nacionalidad)
+        {
+            this.StringToDNI = dni;
+        }
     }
 }
