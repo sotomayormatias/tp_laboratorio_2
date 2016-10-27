@@ -18,7 +18,10 @@ namespace EntidadesAbstractas
 
         protected virtual string MostrarDatos()
         {
-            return this.ToString();
+            StringBuilder sb = new StringBuilder();
+            sb.Append(base.ToString());
+            sb.AppendLine("CARNET NÚMERO: " + this._identificador);
+            return sb.ToString();
         }
 
         protected abstract string ParticiparEnClase();

@@ -14,16 +14,15 @@ namespace EntidadesInstanciables
         private Gimnasio.EClases _claseQueToma;
         private EEstadoCuenta _estadoCuenta;
         
-        //QUE HAGO CON EL ESTADO DE CUENTA EN ESTE CONSTRUCTOR???
         public Alumno(int id, string nombre, string apellido, string dni, ENacionalidad nacionalidad, Gimnasio.EClases claseQueToma)
-            : base(id, nombre, apellido, dni, nacionalidad)
+            : this(id, nombre, apellido, dni, nacionalidad, claseQueToma, EEstadoCuenta.MesPrueba)
         {
-            this._claseQueToma = claseQueToma;
         }
 
         public Alumno(int id, string nombre, string apellido, string dni, ENacionalidad nacionalidad, Gimnasio.EClases claseQueToma, EEstadoCuenta estadoCuenta)
-            : this(id, nombre, apellido, dni, nacionalidad, claseQueToma)
+            : base(id, nombre, apellido, dni, nacionalidad)
         {
+            this._claseQueToma = claseQueToma;
             this._estadoCuenta = estadoCuenta;
         }
 
@@ -40,11 +39,8 @@ namespace EntidadesInstanciables
         public override string ToString()
         {
             StringBuilder sb = new StringBuilder(base.MostrarDatos());
-            sb.Append("CARNET NÚMERO: ");
-            //COMO MUESTRO EL ID SI EN PersonaGimnasio ES PRIVATE??
-            sb.Append("ESTADO DE CUENTA: ");
-            sb.Append(this._estadoCuenta.ToString() + "\n");
-            sb.Append(this.ParticiparEnClase() + "\n");
+            sb.AppendLine("ESTADO DE CUENTA: " + this._estadoCuenta.ToString());
+            sb.AppendLine(this.ParticiparEnClase());
             return sb.ToString();
         }
 

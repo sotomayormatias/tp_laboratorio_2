@@ -129,10 +129,9 @@ namespace EntidadesAbstractas
 
         public override string ToString()
         {
-            StringBuilder sb = new StringBuilder("NOMBRE COMPLETO: ");
-            sb.Append(this._apellido + ", " + this._nombre + "\n");
-            sb.Append("NACIONALIDAD: ");
-            sb.Append(this._nacionalidad.ToString() + "\n\n");
+            StringBuilder sb = new StringBuilder();
+            sb.AppendLine("NOMBRE COMPLETO: " + this._apellido + ", " + this._nombre);
+            sb.AppendLine("NACIONALIDAD: " + this._nacionalidad.ToString());
             return sb.ToString();
         }
     }
