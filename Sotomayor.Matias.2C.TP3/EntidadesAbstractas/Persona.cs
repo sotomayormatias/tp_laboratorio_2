@@ -132,7 +132,7 @@ namespace EntidadesAbstractas
             StringBuilder sb = new StringBuilder("NOMBRE COMPLETO: ");
             sb.Append(this._apellido + ", " + this._nombre + "\n");
             sb.Append("NACIONALIDAD: ");
-            sb.Append(this._nacionalidad.ToString() + "\n");
+            sb.Append(this._nacionalidad.ToString() + "\n\n");
             return sb.ToString();
         }
     }

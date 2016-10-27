@@ -3,3 +3,10 @@ D:\Sotomayor\TP\Sotomayor.Matias.2C.TP3\EntidadesAbstractas\bin\Debug\EntidadesA
 D:\Sotomayor\TP\Sotomayor.Matias.2C.TP3\EntidadesAbstractas\bin\Debug\EntidadesAbstractas.pdb
 D:\Sotomayor\TP\Sotomayor.Matias.2C.TP3\EntidadesAbstractas\obj\Debug\EntidadesAbstractas.dll
 D:\Sotomayor\TP\Sotomayor.Matias.2C.TP3\EntidadesAbstractas\obj\Debug\EntidadesAbstractas.pdb
+C:\repositorios\LaboYProgra2\TPs\Sotomayor.Matias.2C.TP3\EntidadesAbstractas\bin\Debug\EntidadesAbstractas.dll
+C:\repositorios\LaboYProgra2\TPs\Sotomayor.Matias.2C.TP3\EntidadesAbstractas\bin\Debug\EntidadesAbstractas.pdb
+C:\repositorios\LaboYProgra2\TPs\Sotomayor.Matias.2C.TP3\EntidadesAbstractas\bin\Debug\Excepciones.dll
+C:\repositorios\LaboYProgra2\TPs\Sotomayor.Matias.2C.TP3\EntidadesAbstractas\bin\Debug\Excepciones.pdb
+C:\repositorios\LaboYProgra2\TPs\Sotomayor.Matias.2C.TP3\EntidadesAbstractas\obj\Debug\EntidadesAbstractas.csprojResolveAssemblyReference.cache
+C:\repositorios\LaboYProgra2\TPs\Sotomayor.Matias.2C.TP3\EntidadesAbstractas\obj\Debug\EntidadesAbstractas.dll
+C:\repositorios\LaboYProgra2\TPs\Sotomayor.Matias.2C.TP3\EntidadesAbstractas\obj\Debug\EntidadesAbstractas.pdb
