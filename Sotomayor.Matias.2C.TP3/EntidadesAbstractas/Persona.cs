@@ -2,7 +2,9 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
+using Excepciones;
 
 namespace EntidadesAbstractas
 {
@@ -53,6 +55,7 @@ namespace EntidadesAbstractas
         #endregion
 
 
+        #region Constructores
         public Persona(string nombre, string apellido, ENacionalidad nacionalidad)
         {
             this._nombre = nombre;
@@ -70,6 +73,67 @@ namespace EntidadesAbstractas
             : this(nombre, apellido, nacionalidad)
         {
             this.StringToDNI = dni;
+        } 
+        #endregion
+
+        private int ValidarDni(ENacionalidad nacionalidad, int dato)
+        {
+            bool dniInvalido = false;
+            switch (nacionalidad)
+            {
+                case ENacionalidad.Argentino:
+                    if (dato < 1 || dato > 89999999)
+                        dniInvalido = true;
+                    break;
+                case ENacionalidad.Extranjero:
+                    if (dato < 90000000 || dato > 99999999)
+                        dniInvalido = true;
+                    break;
+                default:
+                    throw new NacionalidadInvalidaException("Nacionalidad inexistente");
+            }
+
+            if (dniInvalido)
+                throw new DniIvalidoException("El dni es invalido");
+            else
+                return dato;
+        }
+
+        private int ValidarDni(ENacionalidad nacionalidad, string dato)
+        {
+            try
+            {
+                return ValidarDni(nacionalidad, int.Parse(dato));
+            }
+            catch (DniIvalidoException)
+            {
+
+                throw;
+            }
+            catch (FormatException)
+            {
+                throw new DniIvalidoException("El dni no es numerico");
+            }
+        }
+
+        private string ValidarNombreApellido(string dato)
+        {
+            //Se establece una expresion regular para validar que el dato ingresado
+            //sea coherente para un nombre y apellido (que contenga solo letras, sin numeros ni simbolos)
+            Regex reg = new Regex("^[A-Za-z]+$");
+            if (reg.IsMatch(dato))
+                return dato;
+            else
+                return "";
+        }
+
+        public override string ToString()
+        {
+            StringBuilder sb = new StringBuilder("NOMBRE COMPLETO: ");
+            sb.Append(this._apellido + ", " + this._nombre + "\n");
+            sb.Append("NACIONALIDAD: ");
+            sb.Append(this._nacionalidad.ToString() + "\n");
+            return sb.ToString();
         }
     }
 }

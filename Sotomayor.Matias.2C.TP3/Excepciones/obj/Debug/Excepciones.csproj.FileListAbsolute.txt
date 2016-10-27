@@ -1,0 +1,4 @@
+D:\Sotomayor\TP\Sotomayor.Matias.2C.TP3\Excepciones\bin\Debug\Excepciones.dll
+D:\Sotomayor\TP\Sotomayor.Matias.2C.TP3\Excepciones\bin\Debug\Excepciones.pdb
+D:\Sotomayor\TP\Sotomayor.Matias.2C.TP3\Excepciones\obj\Debug\Excepciones.dll
+D:\Sotomayor\TP\Sotomayor.Matias.2C.TP3\Excepciones\obj\Debug\Excepciones.pdb
