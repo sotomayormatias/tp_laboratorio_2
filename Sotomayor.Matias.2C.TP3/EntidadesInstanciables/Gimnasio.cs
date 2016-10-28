@@ -8,6 +8,6 @@ namespace EntidadesInstanciables
 {
     public class Gimnasio
     {
-        public enum EClases { Crossfit, Natacion, Pilates, Yoga };
+        public enum EClases { Crossfit = 0, Natacion = 1, Pilates = 2, Yoga = 3 };
     }
 }
