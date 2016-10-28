@@ -11,5 +11,10 @@ namespace EntidadesInstanciables
     {
         private Queue<Gimnasio.EClases> _clasesDelDia;
         private static Random _random;
+        
+        private Instructor() 
+        {
+            this._clasesDelDia = new Queue<Gimnasio.EClases>();
+        }
     }
 }

@@ -7,3 +7,8 @@ C:\repositorios\LaboYProgra2\TPs\Sotomayor.Matias.2C.TP3\Excepciones\bin\Debug\E
 C:\repositorios\LaboYProgra2\TPs\Sotomayor.Matias.2C.TP3\Excepciones\obj\Debug\Excepciones.csprojResolveAssemblyReference.cache
 C:\repositorios\LaboYProgra2\TPs\Sotomayor.Matias.2C.TP3\Excepciones\obj\Debug\Excepciones.dll
 C:\repositorios\LaboYProgra2\TPs\Sotomayor.Matias.2C.TP3\Excepciones\obj\Debug\Excepciones.pdb
+D:\Sotomayor\TPs\Sotomayor.Matias.2C.TP3\Excepciones\bin\Debug\Excepciones.dll
+D:\Sotomayor\TPs\Sotomayor.Matias.2C.TP3\Excepciones\bin\Debug\Excepciones.pdb
+D:\Sotomayor\TPs\Sotomayor.Matias.2C.TP3\Excepciones\obj\Debug\Excepciones.csprojResolveAssemblyReference.cache
+D:\Sotomayor\TPs\Sotomayor.Matias.2C.TP3\Excepciones\obj\Debug\Excepciones.dll
+D:\Sotomayor\TPs\Sotomayor.Matias.2C.TP3\Excepciones\obj\Debug\Excepciones.pdb
