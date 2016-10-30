@@ -12,6 +12,10 @@ namespace Excepciones
             : base()
         { }
 
+        public DniIvalidoException(Exception e)
+            : this(e.Message)
+        { }
+
         public DniIvalidoException(string message)
             : base(message)
         { }

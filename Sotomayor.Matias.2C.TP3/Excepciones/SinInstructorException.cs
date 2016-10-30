@@ -11,9 +11,5 @@ namespace Excepciones
         public SinInstructorException()
             : base()
         { }
-
-        public SinInstructorException(string message)
-            : base(message)
-        { }
     }
 }
