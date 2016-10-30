@@ -13,6 +13,7 @@ namespace EntidadesInstanciables
         private static Random _random;
 
         //TODO: RESOLVER EL TEMA DE LOS CONSTRUCTORES
+        //SI SE DEBEN AGREGAR LOS CONST POR DEFECTO, QUE VALOR SE PONE?
         private Instructor()
         {
             this._clasesDelDia = new Queue<Gimnasio.EClases>();
@@ -33,7 +34,7 @@ namespace EntidadesInstanciables
             this._clasesDelDia.Enqueue((Gimnasio.EClases)Instructor._random.Next(3));
         }
 
-        protected string ParticiparEnClase()
+        protected override string ParticiparEnClase()
         {
             StringBuilder sb = new StringBuilder();
             sb.AppendLine("CLASES DEL DÍA:");
