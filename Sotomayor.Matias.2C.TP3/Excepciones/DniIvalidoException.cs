@@ -19,5 +19,10 @@ namespace Excepciones
         public DniIvalidoException(string message)
             : base(message)
         { }
+
+        //TODO: como es el tema de las excepciones
+        //public DniIvalidoException(string message, Exception e)
+        //    : base(message)
+        //{ }
     }
 }
