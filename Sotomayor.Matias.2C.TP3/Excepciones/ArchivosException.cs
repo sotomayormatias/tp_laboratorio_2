@@ -8,8 +8,10 @@ namespace Excepciones
 {
     public class ArchivosException : Exception
     {
+        private static string MESSAGE = "Hubo un error con el archivo";
+
         public ArchivosException(Exception innerException)
-            : base(innerException.Message)
+            : base(ArchivosException.MESSAGE, innerException)
         { }
     }
 }

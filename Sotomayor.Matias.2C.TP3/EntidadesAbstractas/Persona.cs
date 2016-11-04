@@ -18,7 +18,7 @@ namespace EntidadesAbstractas
         public string Apellido
         {
             get { return _apellido; }
-            set { _apellido = value; }
+            set { _apellido = ValidarNombreApellido(value); }
         }
 
         private int _dni;
@@ -26,7 +26,7 @@ namespace EntidadesAbstractas
         public int DNI
         {
             get { return _dni; }
-            set { _dni = value; }
+            set { _dni = ValidarDni(this.Nacionalidad, value); }
         }
 
         private ENacionalidad _nacionalidad;
@@ -42,20 +42,30 @@ namespace EntidadesAbstractas
         public string Nombre
         {
             get { return _nombre; }
-            set { _nombre = value; }
+            set { _nombre = ValidarNombreApellido(value); }
         }
 
         public string StringToDNI
         {
             set
             {
-                this._dni = int.Parse(value);
+                try
+                {
+                    this._dni = ValidarDni(this.Nacionalidad, value);
+                }
+                catch (Exception)
+                {
+                    throw;
+                }
             }
         }
         #endregion
 
 
         #region Constructores
+        public Persona()
+        { }
+
         public Persona(string nombre, string apellido, ENacionalidad nacionalidad)
         {
             this._nombre = nombre;
@@ -76,6 +86,13 @@ namespace EntidadesAbstractas
         } 
         #endregion
 
+        #region Metodos
+        /// <summary>
+        /// Valida que el dni sea coherente con la nacionalidad
+        /// </summary>
+        /// <param name="nacionalidad"></param>
+        /// <param name="dato"></param>
+        /// <returns></returns>
         private int ValidarDni(ENacionalidad nacionalidad, int dato)
         {
             bool dniInvalido = false;
@@ -99,6 +116,12 @@ namespace EntidadesAbstractas
                 return dato;
         }
 
+        /// <summary>
+        /// Valida que el dni sea coherente con la nacionalidad, reutiliza el ValidarDni que recibe el dni como tipo int
+        /// </summary>
+        /// <param name="nacionalidad"></param>
+        /// <param name="dato"></param>
+        /// <returns></returns>
         private int ValidarDni(ENacionalidad nacionalidad, string dato)
         {
             try
@@ -107,7 +130,10 @@ namespace EntidadesAbstractas
             }
             catch (DniIvalidoException)
             {
-
+                throw;
+            }
+            catch (NacionalidadInvalidaException)
+            {
                 throw;
             }
             catch (FormatException)
@@ -116,6 +142,12 @@ namespace EntidadesAbstractas
             }
         }
 
+
+        /// <summary>
+        /// Valida que tanto el nombre como el apellido sean solo caracteres
+        /// </summary>
+        /// <param name="dato"></param>
+        /// <returns></returns>
         private string ValidarNombreApellido(string dato)
         {
             //Se establece una expresion regular para validar que el dato ingresado
@@ -127,12 +159,14 @@ namespace EntidadesAbstractas
                 return "";
         }
 
+
         public override string ToString()
         {
             StringBuilder sb = new StringBuilder();
             sb.AppendLine("NOMBRE COMPLETO: " + this._apellido + ", " + this._nombre);
             sb.AppendLine("NACIONALIDAD: " + this._nacionalidad.ToString());
             return sb.ToString();
-        }
+        } 
+        #endregion
     }
 }

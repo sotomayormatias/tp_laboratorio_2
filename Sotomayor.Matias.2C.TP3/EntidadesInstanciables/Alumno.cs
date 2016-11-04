@@ -28,7 +28,10 @@ namespace EntidadesInstanciables
 
         protected override string MostrarDatos()
         {
-            return this.ToString();
+            StringBuilder sb = new StringBuilder(base.MostrarDatos());
+            sb.AppendLine("ESTADO DE CUENTA: " + this._estadoCuenta.ToString());
+            sb.AppendLine(this.ParticiparEnClase());
+            return sb.ToString();
         }
 
         protected override string ParticiparEnClase()
@@ -38,10 +41,7 @@ namespace EntidadesInstanciables
 
         public override string ToString()
         {
-            StringBuilder sb = new StringBuilder(base.MostrarDatos());
-            sb.AppendLine("ESTADO DE CUENTA: " + this._estadoCuenta.ToString());
-            sb.AppendLine(this.ParticiparEnClase());
-            return sb.ToString();
+            return this.MostrarDatos();
         }
 
         public static bool operator ==(Alumno alumno, Gimnasio.EClases clase)

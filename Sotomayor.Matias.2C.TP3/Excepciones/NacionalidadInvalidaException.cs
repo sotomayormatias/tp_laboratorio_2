@@ -8,8 +8,10 @@ namespace Excepciones
 {
     public class NacionalidadInvalidaException : Exception
     {
+        private static string MESSAGE = "La nacionalidad es invalida";
+
         public NacionalidadInvalidaException()
-            : base()
+            : this(NacionalidadInvalidaException.MESSAGE)
         { }
 
         public NacionalidadInvalidaException(string message)

@@ -12,25 +12,22 @@ namespace EntidadesInstanciables
         private Queue<Gimnasio.EClases> _clasesDelDia;
         private static Random _random;
 
-        //TODO: RESOLVER EL TEMA DE LOS CONSTRUCTORES
-        //SI SE DEBEN AGREGAR LOS CONST POR DEFECTO, QUE VALOR SE PONE?
-        private Instructor()
+        static Instructor()
         {
-            this._clasesDelDia = new Queue<Gimnasio.EClases>();
             Instructor._random = new Random();
-
-            this._randomClases();
-            this._randomClases();
         }
 
-        //ESTE TIENE QUE LLAMAR A BASE O A THIS??
         public Instructor(int id, string nombre, string apellido, string dni, ENacionalidad nacionalidad)
             : base(id, nombre, apellido, dni, nacionalidad)
         {
+
+            this._clasesDelDia = new Queue<Gimnasio.EClases>();
+            this._randomClases();
         }
 
         private void _randomClases()
         {
+            this._clasesDelDia.Enqueue((Gimnasio.EClases)Instructor._random.Next(3));
             this._clasesDelDia.Enqueue((Gimnasio.EClases)Instructor._random.Next(3));
         }
 
@@ -48,19 +45,27 @@ namespace EntidadesInstanciables
 
         public override string ToString()
         {
+            return this.MostrarDatos();
+        }
+
+        protected override string MostrarDatos()
+        {
             StringBuilder sb = new StringBuilder(base.MostrarDatos());
             sb.AppendLine(this.ParticiparEnClase());
             return sb.ToString();
         }
 
-        protected override string MostrarDatos()
-        {
-            return this.ToString();
-        }
-
         public static bool operator ==(Instructor instructor, Gimnasio.EClases clase)
         {
-            return instructor._clasesDelDia.Contains(clase);
+            bool esIgual = false;
+
+            foreach (Gimnasio.EClases unaClase in instructor._clasesDelDia)
+            {
+                if (unaClase == clase)
+                    esIgual = true;
+            }
+
+            return esIgual;
         }
 
         public static bool operator !=(Instructor instructor, Gimnasio.EClases clase)

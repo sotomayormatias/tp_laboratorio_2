@@ -8,21 +8,22 @@ namespace Excepciones
 {
     public class DniIvalidoException : Exception
     {
+        private static string MESSAGE = "El DNI es invalido";
+
         public DniIvalidoException()
-            : base()
+            : this(DniIvalidoException.MESSAGE)
         { }
 
         public DniIvalidoException(Exception e)
-            : this(e.Message)
+            : this(DniIvalidoException.MESSAGE, e)
         { }
 
         public DniIvalidoException(string message)
-            : base(message)
+            : this(message, null)
         { }
 
-        //TODO: como es el tema de las excepciones
-        //public DniIvalidoException(string message, Exception e)
-        //    : base(message)
-        //{ }
+        public DniIvalidoException(string message, Exception e)
+            : base(message, e)
+        { }
     }
 }

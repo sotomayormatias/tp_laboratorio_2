@@ -1,2 +1,10 @@
 C:\repositorios\LaboYProgra2\TPs\Sotomayor.Matias.2C.TP3\EntidadesInstanciables\obj\Debug\EntidadesInstanciables.csprojResolveAssemblyReference.cache
 D:\Sotomayor\TPs\Sotomayor.Matias.2C.TP3\EntidadesInstanciables\obj\Debug\EntidadesInstanciables.csprojResolveAssemblyReference.cache
+D:\Sotomayor\TPs\Sotomayor.Matias.2C.TP3\EntidadesInstanciables\bin\Debug\EntidadesInstanciables.dll
+D:\Sotomayor\TPs\Sotomayor.Matias.2C.TP3\EntidadesInstanciables\bin\Debug\EntidadesInstanciables.pdb
+D:\Sotomayor\TPs\Sotomayor.Matias.2C.TP3\EntidadesInstanciables\bin\Debug\EntidadesAbstractas.dll
+D:\Sotomayor\TPs\Sotomayor.Matias.2C.TP3\EntidadesInstanciables\bin\Debug\Excepciones.dll
+D:\Sotomayor\TPs\Sotomayor.Matias.2C.TP3\EntidadesInstanciables\bin\Debug\EntidadesAbstractas.pdb
+D:\Sotomayor\TPs\Sotomayor.Matias.2C.TP3\EntidadesInstanciables\bin\Debug\Excepciones.pdb
+D:\Sotomayor\TPs\Sotomayor.Matias.2C.TP3\EntidadesInstanciables\obj\Debug\EntidadesInstanciables.dll
+D:\Sotomayor\TPs\Sotomayor.Matias.2C.TP3\EntidadesInstanciables\obj\Debug\EntidadesInstanciables.pdb

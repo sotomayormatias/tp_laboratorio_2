@@ -23,8 +23,15 @@ namespace EntidadesInstanciables
 
         public static bool operator ==(Gimnasio gym, Alumno alumno)
         {
-            //TODO: esta bien usar el Contains en lugar de iterar la lista?
-            return gym._alumnos.Contains(alumno);
+            bool esIgual = false;
+
+            foreach (Alumno unAlumno in gym._alumnos)
+            {
+                if (unAlumno == alumno)
+                    esIgual = true;
+            }
+
+            return esIgual;
         }
 
         public static bool operator !=(Gimnasio gym, Alumno alumno)
@@ -40,8 +47,15 @@ namespace EntidadesInstanciables
 
         public static bool operator ==(Gimnasio gym, Instructor instructor)
         {
-            //TODO: esta bien usar el Contains en lugar de iterar la lista?
-            return gym._instructores.Contains(instructor);
+            bool esIgual = false;
+
+            foreach (Instructor unInstructor in gym._instructores)
+            {
+                if (unInstructor == instructor)
+                    esIgual = true;
+            }
+
+            return esIgual;
         }
 
         public static bool operator !=(Gimnasio gym, Instructor instructor)

@@ -8,8 +8,10 @@ namespace Excepciones
 {
     public class SinInstructorException : Exception
     {
+        private static string MESSAGE = "No hay instructor";
+
         public SinInstructorException()
-            : base()
+            : base(SinInstructorException.MESSAGE)
         { }
     }
 }

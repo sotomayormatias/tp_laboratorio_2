@@ -12,7 +12,7 @@ namespace EntidadesInstanciables
         private Gimnasio.EClases _clase;
         private Instructor _instructor;
 
-        //TODO: no entiendo la property this[int i]
+        //TODO: no entiendo la property this[int i] usar indexadores
 
         public Jornada()
         {
@@ -28,13 +28,15 @@ namespace EntidadesInstanciables
 
         public static bool operator ==(Jornada jornada, Alumno alumno)
         {
-            //TODO: la igualdad es si el alumno esta en la lista de la jornada o si comparten la clase?
+            bool esIgual = false;
 
-            //Comparten solo la misma clase
-            //return alumno == jornada._clase;
+            foreach (Alumno unAlumno in jornada._alumnos)
+            {
+                if (unAlumno == alumno)
+                    esIgual = true;
+            }
 
-            //El alumno esta en la lista de alumnos de la jornada
-            return jornada._alumnos.Contains(alumno);
+            return esIgual;
         }
 
         public static bool operator !=(Jornada jornada, Alumno alumno)
@@ -52,10 +54,15 @@ namespace EntidadesInstanciables
 
         public override string ToString()
         {
-            //TODO: el ToString lee del archivo?
-            return base.ToString();
+            StringBuilder sb = new StringBuilder();
+            sb.AppendLine("JORNADA:");
+            sb.AppendLine("CLASE DE " + this._clase + " POR ");
+            sb.AppendLine(this._instructor.ToString());
+            sb.AppendLine("ALUMNOS:");
+            sb.AppendLine(this._alumnos.ToString());
+
+            return sb.ToString();
         }
 
-        //TODO: el enunciado habla de un metodo LEER... a que se refiere?
     }
 }
