@@ -9,7 +9,7 @@ namespace EntidadesInstanciables
 {
     public class Instructor : PersonaGimnasio
     {
-        private Queue<Gimnasio.EClases> _clasesDelDia;
+        public Queue<Gimnasio.EClases> _clasesDelDia;
         private static Random _random;
 
         static Instructor()

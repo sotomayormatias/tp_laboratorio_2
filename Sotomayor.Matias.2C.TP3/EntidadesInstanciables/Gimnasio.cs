@@ -14,6 +14,14 @@ namespace EntidadesInstanciables
         private List<Instructor> _instructores;
         private List<Jornada> _jornadas;
 
+        public Jornada this[int index]
+        {
+            get
+            {
+                return this._jornadas[index];
+            }
+        }
+
         public Gimnasio()
         {
             this._alumnos = new List<Alumno>();
@@ -41,7 +49,9 @@ namespace EntidadesInstanciables
 
         public static Gimnasio operator +(Gimnasio gym, Alumno alumno)
         {
-            gym._alumnos.Add(alumno);
+            if (gym != alumno)
+                gym._alumnos.Add(alumno);
+
             return gym;
         }
 
@@ -65,8 +75,48 @@ namespace EntidadesInstanciables
 
         public static Gimnasio operator +(Gimnasio gym, Instructor instructor)
         {
-            gym._instructores.Add(instructor);
+            if (gym != instructor)
+                gym._instructores.Add(instructor);
+
             return gym;
+        }
+
+        public static Gimnasio operator +(Gimnasio gym, EClases clase)
+        {
+            Instructor instructorAsignado = null;
+
+            foreach (Instructor instr in gym._instructores)
+            {
+                if (instr == clase)
+                    instructorAsignado = instr;
+            }
+
+            Jornada jornada = new Jornada(clase, instructorAsignado);
+
+            foreach (Alumno unAlumno in gym._alumnos)
+            {
+                if (unAlumno == clase)
+                    gym._alumnos.Add(unAlumno);
+            }
+
+
+            return gym;
+        }
+
+        private static string MostrarDatos(Gimnasio gym)
+        {
+            StringBuilder sb = new StringBuilder();
+            foreach (Jornada jornada in gym._jornadas)
+            {
+                sb.AppendLine(jornada.ToString());
+            }
+
+            return sb.ToString();
+        }
+
+        public override string ToString()
+        {
+            return Gimnasio.MostrarDatos(this);
         }
     }
 }

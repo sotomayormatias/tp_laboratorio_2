@@ -31,8 +31,7 @@ namespace EntidadesAbstractas
 
         public static bool operator ==(PersonaGimnasio pg1, PersonaGimnasio pg2)
         {
-            //TODO: validar tambien por el tipo, si ambos son instructores o alumnos
-            return (pg1._identificador == pg2._identificador || pg1.DNI == pg2.DNI);
+            return (pg1.GetType() == pg2.GetType() && (pg1._identificador == pg2._identificador || pg1.DNI == pg2.DNI));
         }
 
         public static bool operator !=(PersonaGimnasio pg1, PersonaGimnasio pg2)

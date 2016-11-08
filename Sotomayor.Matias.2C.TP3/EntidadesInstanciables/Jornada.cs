@@ -12,8 +12,6 @@ namespace EntidadesInstanciables
         private Gimnasio.EClases _clase;
         private Instructor _instructor;
 
-        //TODO: no entiendo la property this[int i] usar indexadores
-
         public Jornada()
         {
             this._alumnos = new List<Alumno>();
