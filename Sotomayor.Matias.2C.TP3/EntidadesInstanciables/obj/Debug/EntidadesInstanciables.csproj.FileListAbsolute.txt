@@ -18,3 +18,5 @@ C:\repositorios\LaboYProgra2\TPs\Sotomayor.Matias.2C.TP3\EntidadesInstanciables\
 C:\repositorios\LaboYProgra2\TPs\Sotomayor.Matias.2C.TP3\EntidadesInstanciables\bin\Debug\Excepciones.pdb
 C:\repositorios\LaboYProgra2\TPs\Sotomayor.Matias.2C.TP3\EntidadesInstanciables\obj\Debug\EntidadesInstanciables.dll
 C:\repositorios\LaboYProgra2\TPs\Sotomayor.Matias.2C.TP3\EntidadesInstanciables\obj\Debug\EntidadesInstanciables.pdb
+D:\Sotomayor\TPs\Sotomayor.Matias.2C.TP3\EntidadesInstanciables\bin\Debug\Archivos.dll
+D:\Sotomayor\TPs\Sotomayor.Matias.2C.TP3\EntidadesInstanciables\bin\Debug\Archivos.pdb

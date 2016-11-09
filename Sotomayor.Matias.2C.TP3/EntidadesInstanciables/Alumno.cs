@@ -7,6 +7,7 @@ using EntidadesAbstractas;
 
 namespace EntidadesInstanciables
 {
+    [Serializable]
     public sealed class Alumno : PersonaGimnasio
     {
         public enum EEstadoCuenta { MesPrueba, Deudor, AlDia };

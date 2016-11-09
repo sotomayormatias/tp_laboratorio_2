@@ -10,6 +10,9 @@ using System.Xml.Serialization;
 namespace EntidadesInstanciables
 {
     [Serializable]
+    [XmlInclude(typeof(Alumno))]
+    [XmlInclude(typeof(Instructor))]
+    [XmlInclude(typeof(Jornada))]
     public class Gimnasio
     {
         public enum EClases { CrossFit = 0, Natacion = 1, Pilates = 2, Yoga = 3 };

@@ -4,9 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Archivos;
+using System.Xml.Serialization;
 
 namespace EntidadesInstanciables
 {
+    [Serializable]
+    [XmlInclude(typeof(Alumno))]
+    [XmlInclude(typeof(Instructor))]
     public class Jornada
     {
         public List<Alumno> _alumnos;

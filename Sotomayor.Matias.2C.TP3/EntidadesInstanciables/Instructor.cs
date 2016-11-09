@@ -7,9 +7,10 @@ using EntidadesAbstractas;
 
 namespace EntidadesInstanciables
 {
+    [Serializable]
     public class Instructor : PersonaGimnasio
     {
-        public Queue<Gimnasio.EClases> _clasesDelDia;
+        private Queue<Gimnasio.EClases> _clasesDelDia;
         private static Random _random;
 
         static Instructor()
