@@ -1,0 +1,14 @@
+C:\repositorios\LaboYProgra2\TPs\Sotomayor.Matias.2C.TP3\GimnasioSotomayor\bin\Debug\GimnasioSotomayor.exe.config
+C:\repositorios\LaboYProgra2\TPs\Sotomayor.Matias.2C.TP3\GimnasioSotomayor\bin\Debug\GimnasioSotomayor.exe
+C:\repositorios\LaboYProgra2\TPs\Sotomayor.Matias.2C.TP3\GimnasioSotomayor\bin\Debug\GimnasioSotomayor.pdb
+C:\repositorios\LaboYProgra2\TPs\Sotomayor.Matias.2C.TP3\GimnasioSotomayor\bin\Debug\EntidadesAbstractas.dll
+C:\repositorios\LaboYProgra2\TPs\Sotomayor.Matias.2C.TP3\GimnasioSotomayor\bin\Debug\EntidadesInstanciables.dll
+C:\repositorios\LaboYProgra2\TPs\Sotomayor.Matias.2C.TP3\GimnasioSotomayor\bin\Debug\Excepciones.dll
+C:\repositorios\LaboYProgra2\TPs\Sotomayor.Matias.2C.TP3\GimnasioSotomayor\bin\Debug\Archivos.dll
+C:\repositorios\LaboYProgra2\TPs\Sotomayor.Matias.2C.TP3\GimnasioSotomayor\bin\Debug\EntidadesAbstractas.pdb
+C:\repositorios\LaboYProgra2\TPs\Sotomayor.Matias.2C.TP3\GimnasioSotomayor\bin\Debug\EntidadesInstanciables.pdb
+C:\repositorios\LaboYProgra2\TPs\Sotomayor.Matias.2C.TP3\GimnasioSotomayor\bin\Debug\Excepciones.pdb
+C:\repositorios\LaboYProgra2\TPs\Sotomayor.Matias.2C.TP3\GimnasioSotomayor\bin\Debug\Archivos.pdb
+C:\repositorios\LaboYProgra2\TPs\Sotomayor.Matias.2C.TP3\GimnasioSotomayor\obj\Debug\GimnasioSotomayor.csprojResolveAssemblyReference.cache
+C:\repositorios\LaboYProgra2\TPs\Sotomayor.Matias.2C.TP3\GimnasioSotomayor\obj\Debug\GimnasioSotomayor.exe
+C:\repositorios\LaboYProgra2\TPs\Sotomayor.Matias.2C.TP3\GimnasioSotomayor\obj\Debug\GimnasioSotomayor.pdb

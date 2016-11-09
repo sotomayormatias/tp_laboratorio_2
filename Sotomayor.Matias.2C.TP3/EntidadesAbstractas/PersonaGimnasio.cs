@@ -8,7 +8,7 @@ namespace EntidadesAbstractas
 {
     public abstract class PersonaGimnasio : Persona
     {
-        private int _identificador;
+        public int _identificador;
 
         public PersonaGimnasio()
         { }

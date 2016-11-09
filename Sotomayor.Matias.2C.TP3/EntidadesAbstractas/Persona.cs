@@ -5,6 +5,7 @@ using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using Excepciones;
+using System.Xml.Serialization;
 
 namespace EntidadesAbstractas
 {
@@ -45,6 +46,7 @@ namespace EntidadesAbstractas
             set { _nombre = ValidarNombreApellido(value); }
         }
 
+        [XmlIgnore]
         public string StringToDNI
         {
             set
@@ -55,7 +57,7 @@ namespace EntidadesAbstractas
                 }
                 catch (Exception)
                 {
-                    throw;
+                    throw new NacionalidadInvalidaException();
                 }
             }
         }

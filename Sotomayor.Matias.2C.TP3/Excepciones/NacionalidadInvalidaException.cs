@@ -8,7 +8,7 @@ namespace Excepciones
 {
     public class NacionalidadInvalidaException : Exception
     {
-        private static string MESSAGE = "La nacionalidad es invalida";
+        private static string MESSAGE = "La nacionalidad no se condice con el numero de DNI";
 
         public NacionalidadInvalidaException()
             : this(NacionalidadInvalidaException.MESSAGE)

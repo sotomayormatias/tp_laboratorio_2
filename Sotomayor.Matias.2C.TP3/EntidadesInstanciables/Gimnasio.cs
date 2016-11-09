@@ -5,17 +5,20 @@ using System.Text;
 using System.Threading.Tasks;
 using Excepciones;
 using Archivos;
+using System.Xml.Serialization;
 
 namespace EntidadesInstanciables
 {
+    [Serializable]
     public class Gimnasio
     {
-        public enum EClases { Crossfit = 0, Natacion = 1, Pilates = 2, Yoga = 3 };
+        public enum EClases { CrossFit = 0, Natacion = 1, Pilates = 2, Yoga = 3 };
 
-        private List<Alumno> _alumnos;
-        private List<Instructor> _instructores;
-        private List<Jornada> _jornadas;
+        public List<Alumno> _alumnos;
+        public List<Instructor> _instructores;
+        public List<Jornada> _jornadas;
 
+        [XmlIgnore]
         public Jornada this[int index]
         {
             get
@@ -53,6 +56,8 @@ namespace EntidadesInstanciables
         {
             if (gym != alumno)
                 gym._alumnos.Add(alumno);
+            else
+                throw new AlumnoRepetidoException();
 
             return gym;
         }
@@ -96,7 +101,7 @@ namespace EntidadesInstanciables
                 }
             }
 
-            if (instructorDisponible != null)
+            if (!Object.Equals(instructorDisponible, null))
                 return instructorDisponible;
             else
                 throw new SinInstructorException();
@@ -127,16 +132,16 @@ namespace EntidadesInstanciables
                 foreach (Alumno unAlumno in gym._alumnos)
                 {
                     if (unAlumno == clase)
-                        gym._alumnos.Add(unAlumno);
+                        jornada._alumnos.Add(unAlumno);
                 }
 
-
+                gym._jornadas.Add(jornada);
                 return gym;
             }
-            catch (Exception)
+            catch (Exception e)
             {
 
-                throw;
+                throw e;
             }
         }
 

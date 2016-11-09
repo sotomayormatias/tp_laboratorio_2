@@ -11,9 +11,13 @@ namespace EntidadesInstanciables
     {
         public enum EEstadoCuenta { MesPrueba, Deudor, AlDia };
 
-        private Gimnasio.EClases _claseQueToma;
-        private EEstadoCuenta _estadoCuenta;
-        
+        public Gimnasio.EClases _claseQueToma;
+        public EEstadoCuenta _estadoCuenta;
+
+        public Alumno()
+        { 
+        }
+
         public Alumno(int id, string nombre, string apellido, string dni, ENacionalidad nacionalidad, Gimnasio.EClases claseQueToma)
             : this(id, nombre, apellido, dni, nacionalidad, claseQueToma, EEstadoCuenta.MesPrueba)
         {

@@ -9,9 +9,9 @@ namespace EntidadesInstanciables
 {
     public class Jornada
     {
-        private List<Alumno> _alumnos;
-        private Gimnasio.EClases _clase;
-        private Instructor _instructor;
+        public List<Alumno> _alumnos;
+        public Gimnasio.EClases _clase;
+        public Instructor _instructor;
 
         public Jornada()
         {
@@ -58,7 +58,10 @@ namespace EntidadesInstanciables
             sb.AppendLine("CLASE DE " + this._clase + " POR ");
             sb.AppendLine(this._instructor.ToString());
             sb.AppendLine("ALUMNOS:");
-            sb.AppendLine(this._alumnos.ToString());
+            foreach (Alumno unAlumno in this._alumnos)
+            {
+                sb.AppendLine(unAlumno.ToString());
+            }
             sb.AppendLine("<------------------------------------------------>");
 
             return sb.ToString();

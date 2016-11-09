@@ -8,7 +8,7 @@ namespace Excepciones
 {
     public class SinInstructorException : Exception
     {
-        private static string MESSAGE = "No hay instructor";
+        private static string MESSAGE = "No hay instructor para la clase.";
 
         public SinInstructorException()
             : base(SinInstructorException.MESSAGE)
