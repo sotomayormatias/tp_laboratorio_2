@@ -46,9 +46,17 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Archivos\Archivos.csproj">
+      <Project>{ebc12d20-a750-47ef-a651-7706476ff9dd}</Project>
+      <Name>Archivos</Name>
+    </ProjectReference>
     <ProjectReference Include="..\EntidadesAbstractas\EntidadesAbstractas.csproj">
       <Project>{fa993c6b-1471-4fd6-94a0-61ca12c44a77}</Project>
       <Name>EntidadesAbstractas</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Excepciones\Excepciones.csproj">
+      <Project>{5fddfea5-4a8c-48a5-9290-45e523b26947}</Project>
+      <Name>Excepciones</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

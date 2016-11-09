@@ -8,3 +8,13 @@ D:\Sotomayor\TPs\Sotomayor.Matias.2C.TP3\EntidadesInstanciables\bin\Debug\Entida
 D:\Sotomayor\TPs\Sotomayor.Matias.2C.TP3\EntidadesInstanciables\bin\Debug\Excepciones.pdb
 D:\Sotomayor\TPs\Sotomayor.Matias.2C.TP3\EntidadesInstanciables\obj\Debug\EntidadesInstanciables.dll
 D:\Sotomayor\TPs\Sotomayor.Matias.2C.TP3\EntidadesInstanciables\obj\Debug\EntidadesInstanciables.pdb
+C:\repositorios\LaboYProgra2\TPs\Sotomayor.Matias.2C.TP3\EntidadesInstanciables\bin\Debug\EntidadesInstanciables.dll
+C:\repositorios\LaboYProgra2\TPs\Sotomayor.Matias.2C.TP3\EntidadesInstanciables\bin\Debug\EntidadesInstanciables.pdb
+C:\repositorios\LaboYProgra2\TPs\Sotomayor.Matias.2C.TP3\EntidadesInstanciables\bin\Debug\Archivos.dll
+C:\repositorios\LaboYProgra2\TPs\Sotomayor.Matias.2C.TP3\EntidadesInstanciables\bin\Debug\EntidadesAbstractas.dll
+C:\repositorios\LaboYProgra2\TPs\Sotomayor.Matias.2C.TP3\EntidadesInstanciables\bin\Debug\Excepciones.dll
+C:\repositorios\LaboYProgra2\TPs\Sotomayor.Matias.2C.TP3\EntidadesInstanciables\bin\Debug\Archivos.pdb
+C:\repositorios\LaboYProgra2\TPs\Sotomayor.Matias.2C.TP3\EntidadesInstanciables\bin\Debug\EntidadesAbstractas.pdb
+C:\repositorios\LaboYProgra2\TPs\Sotomayor.Matias.2C.TP3\EntidadesInstanciables\bin\Debug\Excepciones.pdb
+C:\repositorios\LaboYProgra2\TPs\Sotomayor.Matias.2C.TP3\EntidadesInstanciables\obj\Debug\EntidadesInstanciables.dll
+C:\repositorios\LaboYProgra2\TPs\Sotomayor.Matias.2C.TP3\EntidadesInstanciables\obj\Debug\EntidadesInstanciables.pdb

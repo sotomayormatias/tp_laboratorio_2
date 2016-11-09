@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Excepciones;
+using Archivos;
 
 namespace EntidadesInstanciables
 {
@@ -81,26 +83,61 @@ namespace EntidadesInstanciables
             return gym;
         }
 
-        public static Gimnasio operator +(Gimnasio gym, EClases clase)
+        public static Instructor operator ==(Gimnasio gym, EClases clase)
         {
-            Instructor instructorAsignado = null;
+            Instructor instructorDisponible = null;
 
             foreach (Instructor instr in gym._instructores)
             {
                 if (instr == clase)
-                    instructorAsignado = instr;
+                {
+                    instructorDisponible = instr;
+                    break;
+                }
             }
 
-            Jornada jornada = new Jornada(clase, instructorAsignado);
+            if (instructorDisponible != null)
+                return instructorDisponible;
+            else
+                throw new SinInstructorException();
+        }
 
-            foreach (Alumno unAlumno in gym._alumnos)
+        public static Instructor operator !=(Gimnasio gym, EClases clase)
+        {
+            Instructor instructorNoDisponible = null;
+
+            foreach (Instructor instr in gym._instructores)
             {
-                if (unAlumno == clase)
-                    gym._alumnos.Add(unAlumno);
+                if (instr != clase)
+                {
+                    instructorNoDisponible = instr;
+                    break;
+                }
             }
 
+            return instructorNoDisponible;
+        }
 
-            return gym;
+        public static Gimnasio operator +(Gimnasio gym, EClases clase)
+        {
+            try
+            {
+                Jornada jornada = new Jornada(clase, gym == clase);
+
+                foreach (Alumno unAlumno in gym._alumnos)
+                {
+                    if (unAlumno == clase)
+                        gym._alumnos.Add(unAlumno);
+                }
+
+
+                return gym;
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
         }
 
         private static string MostrarDatos(Gimnasio gym)
@@ -117,6 +154,21 @@ namespace EntidadesInstanciables
         public override string ToString()
         {
             return Gimnasio.MostrarDatos(this);
+        }
+
+        public static bool Guardar(Gimnasio gym)
+        {
+            Xml<Gimnasio> xml = new Xml<Gimnasio>();
+            return xml.Guardar("Gimnasio.xml", gym);
+        }
+
+        public static Gimnasio Leer(Gimnasio gym)
+        {
+            Gimnasio unGym;
+            Xml<Gimnasio> xml = new Xml<Gimnasio>();
+
+            xml.Leer("Gimnasio.xml", out unGym);
+            return unGym;
         }
     }
 }

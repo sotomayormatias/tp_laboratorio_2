@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Archivos;
 
 namespace EntidadesInstanciables
 {
@@ -58,8 +59,26 @@ namespace EntidadesInstanciables
             sb.AppendLine(this._instructor.ToString());
             sb.AppendLine("ALUMNOS:");
             sb.AppendLine(this._alumnos.ToString());
+            sb.AppendLine("<------------------------------------------------>");
 
             return sb.ToString();
+        }
+
+        public static bool Guardar(Jornada jornada)
+        {
+            Texto texto = new Texto();
+
+            return texto.Guardar("Jornada.txt", jornada.ToString());
+        }
+
+        public static string Leer(Jornada jornada)
+        {
+            string datosJornada = "";
+            Texto texto = new Texto();
+
+            texto.Leer("Jornada.txt", out datosJornada);
+
+            return datosJornada;
         }
 
     }
