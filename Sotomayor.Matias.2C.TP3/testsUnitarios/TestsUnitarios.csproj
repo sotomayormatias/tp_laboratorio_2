@@ -53,6 +53,20 @@
     <Compile Include="UnitTest1.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\EntidadesAbstractas\EntidadesAbstractas.csproj">
+      <Project>{fa993c6b-1471-4fd6-94a0-61ca12c44a77}</Project>
+      <Name>EntidadesAbstractas</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\EntidadesInstanciables\EntidadesInstanciables.csproj">
+      <Project>{73552207-33da-4e76-8888-d05f39fd30c2}</Project>
+      <Name>EntidadesInstanciables</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Excepciones\Excepciones.csproj">
+      <Project>{5fddfea5-4a8c-48a5-9290-45e523b26947}</Project>
+      <Name>Excepciones</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">
       <ItemGroup>

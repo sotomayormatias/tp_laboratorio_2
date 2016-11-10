@@ -140,7 +140,7 @@ namespace EntidadesAbstractas
             }
             catch (FormatException)
             {
-                throw new DniIvalidoException("El dni no es numerico");
+                throw new DniIvalidoException();
             }
         }
 
