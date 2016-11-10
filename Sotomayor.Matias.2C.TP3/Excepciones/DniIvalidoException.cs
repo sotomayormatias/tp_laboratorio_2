@@ -8,8 +8,11 @@ namespace Excepciones
 {
     public class DniIvalidoException : Exception
     {
+        #region Atributos
         private static string MESSAGE = "El DNI es invalido";
+        #endregion
 
+        #region Constructores
         public DniIvalidoException()
             : this(DniIvalidoException.MESSAGE)
         { }
@@ -25,5 +28,6 @@ namespace Excepciones
         public DniIvalidoException(string message, Exception e)
             : base(message, e)
         { }
+        #endregion
     }
 }

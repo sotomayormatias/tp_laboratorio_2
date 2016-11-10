@@ -11,6 +11,7 @@ namespace EntidadesAbstractas
 {
     public abstract class Persona
     {
+        //Enumerado de nacionalidades
         public enum ENacionalidad { Argentino, Extranjero };
 
         #region Atributos y Propiedades
@@ -53,6 +54,7 @@ namespace EntidadesAbstractas
             {
                 try
                 {
+                    //Se valida que el dni tenga el formato correcto
                     this._dni = ValidarDni(this.Nacionalidad, value);
                 }
                 catch (Exception)
@@ -62,7 +64,6 @@ namespace EntidadesAbstractas
             }
         }
         #endregion
-
 
         #region Constructores
         public Persona()
@@ -85,7 +86,7 @@ namespace EntidadesAbstractas
             : this(nombre, apellido, nacionalidad)
         {
             this.StringToDNI = dni;
-        } 
+        }
         #endregion
 
         #region Metodos
@@ -161,14 +162,17 @@ namespace EntidadesAbstractas
                 return "";
         }
 
-
+        /// <summary>
+        /// Retorna una cadena con todos los datos de la persona
+        /// </summary>
+        /// <returns></returns>
         public override string ToString()
         {
             StringBuilder sb = new StringBuilder();
             sb.AppendLine("NOMBRE COMPLETO: " + this._apellido + ", " + this._nombre);
             sb.AppendLine("NACIONALIDAD: " + this._nacionalidad.ToString());
             return sb.ToString();
-        } 
+        }
         #endregion
     }
 }

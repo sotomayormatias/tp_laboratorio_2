@@ -8,8 +8,11 @@ namespace Excepciones
 {
     public class NacionalidadInvalidaException : Exception
     {
+        #region Atributos
         private static string MESSAGE = "La nacionalidad no se condice con el numero de DNI";
+        #endregion
 
+        #region Constructores
         public NacionalidadInvalidaException()
             : this(NacionalidadInvalidaException.MESSAGE)
         { }
@@ -17,5 +20,6 @@ namespace Excepciones
         public NacionalidadInvalidaException(string message)
             : base(message)
         { }
+        #endregion
     }
 }

@@ -8,10 +8,14 @@ namespace Excepciones
 {
     public class AlumnoRepetidoException : Exception
     {
+        #region Atributos
         private static string MESSAGE = "Alumno repetido.";
+        #endregion
 
+        #region Constructores
         public AlumnoRepetidoException()
             : base(AlumnoRepetidoException.MESSAGE)
         { }
+        #endregion
     }
 }

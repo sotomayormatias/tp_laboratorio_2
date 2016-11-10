@@ -13,10 +13,13 @@ namespace EntidadesInstanciables
     [XmlInclude(typeof(Instructor))]
     public class Jornada
     {
+        #region Atributos
         public List<Alumno> _alumnos;
         public Gimnasio.EClases _clase;
         public Instructor _instructor;
+        #endregion
 
+        #region Constructores
         public Jornada()
         {
             this._alumnos = new List<Alumno>();
@@ -28,7 +31,15 @@ namespace EntidadesInstanciables
             this._clase = clase;
             this._instructor = instructor;
         }
+        #endregion
 
+        #region Metodos
+        /// <summary>
+        /// La igualdad se da cuando un alumno ya esta cargado en la jornada
+        /// </summary>
+        /// <param name="jornada"></param>
+        /// <param name="alumno"></param>
+        /// <returns></returns>
         public static bool operator ==(Jornada jornada, Alumno alumno)
         {
             bool esIgual = false;
@@ -42,11 +53,23 @@ namespace EntidadesInstanciables
             return esIgual;
         }
 
+        /// <summary>
+        /// La desigualdad se da cuando no se da la igualdad
+        /// </summary>
+        /// <param name="jornada"></param>
+        /// <param name="alumno"></param>
+        /// <returns></returns>
         public static bool operator !=(Jornada jornada, Alumno alumno)
         {
             return !(jornada == alumno);
         }
 
+        /// <summary>
+        /// Agrega un alumno a la jornada
+        /// </summary>
+        /// <param name="jornada"></param>
+        /// <param name="alumno"></param>
+        /// <returns></returns>
         public static Jornada operator +(Jornada jornada, Alumno alumno)
         {
             if (jornada != alumno)
@@ -55,6 +78,10 @@ namespace EntidadesInstanciables
             return jornada;
         }
 
+        /// <summary>
+        /// Retorna una cadena con los datos del objeto de tipo Jornada
+        /// </summary>
+        /// <returns></returns>
         public override string ToString()
         {
             StringBuilder sb = new StringBuilder();
@@ -71,6 +98,11 @@ namespace EntidadesInstanciables
             return sb.ToString();
         }
 
+        /// <summary>
+        /// Persiste los datos de la jornada en un archivo de texto llamado 'Jornada.txt'
+        /// </summary>
+        /// <param name="jornada"></param>
+        /// <returns></returns>
         public static bool Guardar(Jornada jornada)
         {
             Texto texto = new Texto();
@@ -78,6 +110,11 @@ namespace EntidadesInstanciables
             return texto.Guardar("Jornada.txt", jornada.ToString());
         }
 
+        /// <summary>
+        /// Retorna una cadena con los datos de la jornada almacenados en el archivo 'Jornada.txt'
+        /// </summary>
+        /// <param name="jornada"></param>
+        /// <returns></returns>
         public static string Leer(Jornada jornada)
         {
             string datosJornada = "";
@@ -87,6 +124,6 @@ namespace EntidadesInstanciables
 
             return datosJornada;
         }
-
+        #endregion
     }
 }
