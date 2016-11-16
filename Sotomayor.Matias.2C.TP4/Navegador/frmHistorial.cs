@@ -23,7 +23,14 @@ namespace Navegador
         {
             Archivos.Texto archivos = new Archivos.Texto(frmHistorial.ARCHIVO_HISTORIAL);
 
-            
+            List<string> historial;
+            if(archivos.leer(out historial))
+            {
+                foreach (string url in historial)
+	            {
+                    this.lstHistorial.Items.Add(url);
+	            }
+            }
         }
     }
 }

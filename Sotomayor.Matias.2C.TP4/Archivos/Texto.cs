@@ -14,6 +14,7 @@ namespace Archivos
 
         public Texto(string archivo)
         {
+            this._archivo = archivo;
         }
 
         public bool guardar(string datos)
@@ -26,7 +27,7 @@ namespace Archivos
 
                 return true;
             }
-            catch (Exception)
+            catch (Exception e)
             {
                 return false;
             }

@@ -30,7 +30,7 @@ namespace Navegador
             this.txtUrl.ForeColor = Color.Gray;
             this.txtUrl.Text = frmWebBrowser.ESCRIBA_AQUI;
 
-            archivos = new Archivos.Texto(frmHistorial.ARCHIVO_HISTORIAL);
+            this.archivos = new Archivos.Texto(frmHistorial.ARCHIVO_HISTORIAL);
         }
 
         #region "Escriba aquí..."
@@ -109,6 +109,11 @@ namespace Navegador
                 new Thread(new ThreadStart(desc.IniciarDescarga)).Start();
             }
             this.archivos.guardar(this.txtUrl.Text);
+        }
+
+        private void mostrarTodoElHistorialToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            new frmHistorial().ShowDialog();
         }
     }
 }
