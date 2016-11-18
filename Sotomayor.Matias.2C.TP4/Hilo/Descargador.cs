@@ -14,11 +14,13 @@ namespace Hilo
         private string html;
         private Uri direccion;
 
-        public delegate void EventProgreso(int progreso);
-        public delegate void EventFin(string html);
+        //delegados
+        public delegate void Progreso(int progreso);
+        public delegate void FinDescarga(string html);
 
-        public event EventProgreso eventProgreso;
-        public event EventFin eventFin;
+        //eventos
+        public event Progreso progreso;
+        public event FinDescarga finDescarga;
 
         public Descargador(Uri direccion)
         {
@@ -44,13 +46,13 @@ namespace Hilo
 
         private void WebClientDownloadProgressChanged(object sender, DownloadProgressChangedEventArgs e)
         {
-            this.eventProgreso(e.ProgressPercentage);
+            this.progreso(e.ProgressPercentage);
         }
 
         private void WebClientDownloadCompleted(object sender, DownloadStringCompletedEventArgs e)
         {
             this.html = e.Result;
-            this.eventFin(this.html);
+            this.finDescarga(this.html);
         }
     }
 }

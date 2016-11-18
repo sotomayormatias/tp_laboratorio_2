@@ -94,17 +94,17 @@ namespace Navegador
         {
             Uri uri;
             this.tspbProgreso.Value = 0;
-            if (!this.txtUrl.Text.Contains("http://"))
-            {
-                this.txtUrl.Text = "http://" + this.txtUrl.Text;
-            }
 
+            //Se agrega 'http://'
+            this.txtUrl.Text = this.txtUrl.Text.Contains("http://") ? this.txtUrl.Text : "http://" + this.txtUrl.Text;
+
+            //Se crea la uri  y se inicia el hilo para la descarga
             if (Uri.TryCreate(this.txtUrl.Text, UriKind.Absolute, out uri))
             {
                 Descargador desc = new Descargador(uri);
 
-                desc.eventProgreso += new Descargador.EventProgreso(this.ProgresoDescarga);
-                desc.eventFin += new Descargador.EventFin(this.FinDescarga);
+                desc.progreso += new Descargador.Progreso(this.ProgresoDescarga);
+                desc.finDescarga += new Descargador.FinDescarga(this.FinDescarga);
 
                 new Thread(new ThreadStart(desc.IniciarDescarga)).Start();
             }
